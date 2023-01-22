@@ -21,7 +21,7 @@ https://miniroom-38424.onrender.com
   メールアドレス: test@t.com  
   パスワード: q123123  
 ・「頂きます」者用  
-  メールアドレス: test@p.com. 
+  メールアドレス: test@p.com  
   パスワード: q123123
 
 # 使用方法
