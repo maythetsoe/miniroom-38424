@@ -87,3 +87,97 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 2.SNS（facebook, Google）でログインできます。  
 3.誰でもか使える簡単でシンプリなアプリです。  
 4.地球環境の為に自分が細やかな部分でも貢献出来ればと思い一石二鳥のこのアプリを作る事にしました。  
+
+
+# テーブル設計
+
+## usersテーブル
+
+| Column                           | Type   | Options                       |
+| -------------------------------  | ------ | ----------------------------- |
+| nickname                         | string | null: false                   |
+| first_name                       | string | null: false                   |
+| last_name                        | string | null: false                   |
+| email                            | string | null: false, unique: true     |
+| encrypted_password               | string | null: false                   |
+
+### Association
+
+- has_many :minirooms
+- has_many :donations
+- has_many :comments
+- has_many :receives
+
+## mini roomテーブル　（prototype）
+## imageはActive Storage導入
+
+| Column                           | Type       | Options                        |
+| -------------------------------  | ---------- | -------------------------------|
+| title                            | string     | null: false                    |
+| concept                          | text       | null: false                    |
+| user                             | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- has_many :comments
+
+
+## donationテーブル(出品)
+## imageはActive Storage導入
+
+| Column                           | Type       | Options                        |
+| -------------------------------  | ---------- | -------------------------------|
+| user                             | references | null: false, foreign_key: true |
+| name                             | string     | null: false                    |
+| description                      | text       | null: false                    |
+| category_id                      | integer    | null: false                    |
+| condition_id                     | integer    | null: false                    |
+| delivery_id                      | integer    | null: false                    |
+| region_id                        | integer    | null: false                    |
+| ship_id                          | integer    | null: false                    |
+| size                             | integer    | null: false                    |
+<!-- | mini_room                        | references | null: false, foreign_key: true | -->
+
+
+### Association
+
+- belongs_to :user
+- has_one :receive
+- has_many :comments
+
+
+## receiveテーブル(order)
+
+| Column                           | Type       | Options                        |
+| -------------------------------  | ---------- | -------------------------------|
+| user                             | references | null: false, foreign_key: true |
+| donation                         | references | null: false, foreign_key: true |
+| post_code                        | string     | null: false                    |
+| region_id                        | integer    | null: false                    |
+| city                             | string     | null: false                    |
+| address                          | string     | null: false                    |
+| phone_num                        | string     | null: false                    |
+
+### Association
+
+- belongs_to :user
+- belongs_to :donation
+- has_many :comments 
+
+
+## commentsテーブル
+
+| Column                           | Type       | Options                        |
+| -------------------------------  | ---------- | -------------------------------|
+| content                          | text       | null: false                    |
+| donation                         | references | null: false, foreign_key: true |
+| user                             | references | null: false, foreign_key: true |
+| receive                            | references | null: false, foreign_key: true |
+
+### Association
+
+- belong_to :user
+- belong_to :miniroom
+- belong_to :donation
+- belong_to :receive
