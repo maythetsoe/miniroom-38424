@@ -18,6 +18,7 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+
 }
 
 li {
@@ -40,7 +41,6 @@ a {
   background-color: #22693c;
   margin-bottom: 48px;
   padding: 20px 0;
-
 }
 .inner {
   width: 1024px;
@@ -51,6 +51,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
 .logo {
   width: 300px;
 }
@@ -63,6 +64,7 @@ a {
   border: 1px #da6666 solid;
   border-radius: 3px;
   transition: 0.4s ease;
+
 }
 .nav__btn:hover{
   color: #fff;
@@ -87,16 +89,42 @@ a {
 
 .field, .actions{
   display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
+  /* padding: 0.4em 1.6em; */
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #87CEFA;
-  border: 1px #da6666 solid;
+  background: #22693c;
+  border: 3px #da6666 solid;
   border-radius: 3px;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-  transition: 0.2s ease;
+
+  font-size: 15px;
+  width: 230px;
+  letter-spacing: 0.1em;
+  margin: 0 auto 20px auto;
+  padding: 10px 0 10px 0;
+  text-align: center;
+}
+
+.or-text{
+  color: green;
+}
+
+.minimalist{
+  display: flex;
+
+}
+
+.miniroom__wrapper, .miniroom__hedding,.detail__message {
+  text-align: center;
+  display: inline-block;
+    /* background-color: #ea352d; */
+    border: 3px #da6666 solid;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    margin: 20px 0px;
+    padding: 2vh 10vw;
+
 }
 /* フッター */
 
@@ -153,3 +181,4 @@ a {
     width: 100%;
   }
 }
+
