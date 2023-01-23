@@ -40,7 +40,7 @@ class MiniroomsController < ApplicationController
 
   def destroy
     @miniroom = Miniroom.find(params[:id])
-    if miniroom.destroy
+    if @miniroom.destroy
       redirect_to root_path
     else
       render :index
