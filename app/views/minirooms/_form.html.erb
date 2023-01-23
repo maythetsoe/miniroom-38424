@@ -1,0 +1,22 @@
+<%= form_with model: miniroom, local: true do |f|%>
+<div class="minimalist">
+  <div class="field">
+    <%= f.label :title, "画像のタイトル" %><br />
+    <%= f.text_field :title, id:"miniroom_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :concept, "コンセプト" %><br />
+    <%= f.text_area :concept, class: :form__text, id:"miniroom_concept" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "ミニマルの画像" %><br />
+    <%= f.file_field :image, id:"miniroom_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿する", class: :form__btn  %>
+  </div>
+  </div>
+<% end %>
