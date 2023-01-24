@@ -1,4 +1,5 @@
-<%= form_with model: miniroom, local: true do |f|%>
+<%= form_with model: @miniroom, local: true do |f|%>
+<%= render 'layouts/error_messages', model: f.object %>
 <div class="minimalist">
   <div class="field">
     <%= f.label :title, "画像のタイトル" %><br />
