@@ -1,0 +1,95 @@
+
+<div class="items-sell-contents">
+  <header class="items-sell-header"> 
+
+  </header>
+  <div class="donation-main">
+    <h2 class="donation-title">商品の情報を入力</h2>
+    <%= form_with model: @donation, local: true do |f| %>
+
+     <%= render 'layouts/error_messages', model: f.object %>
+
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"donation-image" %>
+      </div>
+    </div>
+ <div class="new-donations">
+      <div class="weight-bold-text">
+        商品名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          商品の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"商品の説明" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="donations-detail">
+     <div class="weight-bold-text">商品の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+       <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"donation-category"}) %>
+        <div class="weight-bold-text">
+          商品の状態
+          <span class="indispensable">必須</span>
+        </div>
+      <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"donation-sales-status"}) %>
+      </div>
+    </div>
+
+    <div class="items-detail">
+      <div class="weight-bold-text question-text">
+        <span>配送について</span>
+        <a class="question" href="#">?</a>
+      </div>
+      <div class="form">
+        <div class="weight-bold-text">
+          配送料の負担
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:delivery_id, Delivery.all, :id, :name, {}, {class:"select-box", id:"donation-shipping-fee-status"}) %>
+                <div class="weight-bold-text">
+          着払い料金
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select-box", id:"donation-size-fee"}) %>
+        <div class="weight-bold-text">
+          発送元の地域
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:region_id, Region.all, :id, :name, {}, {class:"select-box", id:"donation-prefecture"}) %>
+        <div class="weight-bold-text">
+          発送までの日数
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:ship_id, Ship.all, :id, :name, {}, {class:"select-box", id:"donation-scheduled-delivery"}) %>
+      </div>
+    </div>
+
+
+    <div class="sell-btn-contents">
+      <%= f.submit "寄付する",class:"sell-btn" %>
+      <%=link_to 'もどる', donations_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+  </footer>
+</div>

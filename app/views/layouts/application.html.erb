@@ -11,6 +11,7 @@
   </head>
 
  <body>
+ <%# <div class="container"> %>
     <header class="header">
       <div class="inner">
         <div class="nav">
@@ -22,17 +23,13 @@
            <div class="nav__right">
              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
              <%= link_to "Mini Room", new_miniroom_path, class: :nav__btn %>
-             <%= link_to "Donation Room", "#", class: :nav__btn %><br><br> 
+             <%= link_to "Donation Room", donations_path, class: :nav__btn %><br><br> 
              <%= link_to "#{current_user.nickname}さん , Welcome To Minimal Life", "/users/#{current_user.id}", class: :nav__btn %>
 
             </div>
             <% else %>
           <%# // ログインしているときは上記を表示するようにしましょう %>
           <%# ログインしていないときは以下を表示するようにしましょう %>
-            <div class="nav__right">
-            <%# <a class="dropdown">
-            <img alt="account" class="hover-off header-icon" srcset="account_logo.jpg"> %>
-            <%# <span class = "header-letter">ログイン</span> %>
               <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
               <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
             </div>
@@ -45,5 +42,6 @@
     <footer class="footer">
       <p class="copyright">Copyright © MINIROOM All rights reserved.</p>
     </footer>
+    <%# </div> %>
   </body>
 </html>

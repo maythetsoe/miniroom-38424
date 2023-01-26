@@ -68,3 +68,4 @@ gem 'omniauth', '~>1.9.1'
 gem "pry-rails"
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+gem 'active_hash'
