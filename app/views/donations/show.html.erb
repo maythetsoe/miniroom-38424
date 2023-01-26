@@ -1,0 +1,66 @@
+<%= render "shared/header" %>
+
+<%# 商品の概要 %>
+
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @donation.name %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @donation.image ,class:"item-box-img" %>
+
+       <%# <% if @item.order.present? %> 
+      <%# <div class="sold-out"> %>
+        <%# <span>Sold Out!!</span> %>
+      <%# </div> %>
+       <%# <% end %> 
+ 
+    <% if user_signed_in? && @donation.order.nil? %>  
+    <% if current_user.id == @donation.user.id %>
+    <%= link_to "商品の編集", edit_donation_path(@donation.id), method: :get, class: "item-red-btn" %>
+    <p class="or-text">or</p>
+    <%= link_to "削除", donation_path(@donation.id), method: :delete, class:"item-destroy" %>
+   <% else %>
+
+    <%= link_to "『いただきます』に進む", donation_receives_path(@donation.id) ,class:"item-red-btn"%>
+
+    <% end %> 
+    <% end %>
+ 
+
+    <div class="item-explain-box">
+      <span><%= @donation.description %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">出品者</th>
+          <td class="detail-value"><%= @donation.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @donation.detail_category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">商品の状態</th>
+          <td class="detail-value"><%= @donation.detail_commodity_condition.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">配送料の負担</th>
+          <td class="detail-value"><%= @donation.delivery_burden.name %></td>
+        </tr>
+          <tr>
+          <th class="detail-item">着払い料金</th>
+          <td class="detail-value"><%= @donation.delivery_burden.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">発送元の地域</th>
+          <td class="detail-value"><%= @donation.region.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">発送日の目安</th>
+          <td class="detail-value"><%= @donation.days_to_ship.name %></td>
+        </tr>
+      </tbody>
+    </table>
