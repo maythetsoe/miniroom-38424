@@ -1,5 +1,5 @@
 <div class="card">
-  <%= link_to image_tag(donation.image, class: :card__img ), donations_path(donation.id), method: :get %>
+  <%= link_to image_tag(donation.image, class: :card__img ), donation_path(donation.id), method: :get %>
   <div class="card__body">
     <%= link_to donation.name, donations_path(donation.id), class: :card__title%>
  <%= link_to "/#{donation.user.nickname}", "/users/#{donation.user.id}" , class: :card__user %>  
