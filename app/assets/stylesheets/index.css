@@ -1,0 +1,63 @@
+.transaction-contents {
+  border-radius: 3px;
+  margin: 10px auto 10px auto;
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  flex-direction: column;
+  border: 3px #da6666 solid;
+}
+
+.transaction-main {
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 10vw;
+}
+
+.transaction-title-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+  border: 3px green solid;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  margin: 10px 0 0 0;
+}
+
+/* 配送先の入力 */
+.shipping-address-form {
+  margin-top: 15px;
+  padding: 0.4em 1.6em;
+  color: #fff;
+  background: #22693c;
+  border: 3px #da6666 solid;
+  border-radius: 3px;
+  font-size: 15px;
+  width: 600px;
+  letter-spacing: 0.1em;
+}
+
+.form-any {
+  background: #ccc;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+.receive-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.receive-red-btn {
+  border: 3px solid #ea352d;
+  color: #ea352d;
+  background-color: #fff;
+  font-weight: bold;
+  height: 50px;
+  font-size: 14px;
+}

@@ -21,12 +21,12 @@ class MiniroomsController < ApplicationController
   end
 
   def edit
-      @miniroom = Miniroom.find(params[:id])
-      if user_signed_in? && current_user.id == @miniroom.user_id 
-        redirect_to miniroom_path  unless current_user.id == @miniroom.user_id
-      else
-        redirect_to root_path
-      end
+   @miniroom = Miniroom.find(params[:id])
+    if user_signed_in? && current_user.id == @miniroom.user_id 
+     redirect_to miniroom_path  unless current_user.id == @miniroom.user_id
+    else
+       redirect_to root_path
+    end
   end
 
   def update

@@ -21,11 +21,12 @@ class DonationsController < ApplicationController
     end
   
     def edit
-    #  if current_user.id != @donation.user.id || @donation.present?
+    if current_user.id != @donation.user.id || @donation.present?
     if current_user.id != @donation.user.id
         redirect_to donations_path
      end
     end
+  end
   
     def update
     if @donation.update(donation_params)

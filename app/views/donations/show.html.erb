@@ -7,23 +7,23 @@
     <div class="donation-img-content">
       <%= image_tag @donation.image ,class:"donation-box-img" %><br>
 
-       <%# <% if @item.order.present? %> 
-      <%# <div class="sold-out"> %>
-        <%# <span>Sold Out!!</span> %>
-      <%# </div> %>
-       <%# <% end %> 
+       <% if @donation.receive.present? %> 
+      <div class="out"> 
+        <span>あげちゃった!!</span> 
+      </div> 
+       <% end %>
  
-    <%# <% if user_signed_in? && @donation.receive.nil? %>   
+    <% if user_signed_in? && @donation.receive.nil? %>
     <% if current_user.id == @donation.user.id %>
     <%= link_to "商品の編集", edit_donation_path(@donation.id), method: :get, class: "donation-red-btn" %>
     <p class="or-text">or</p>
     <%= link_to "削除", donation_path(@donation.id), method: :delete, class:"donation-destroy" %>
    <% else %>
 
-    <%= link_to "『いただきます』", donation_path(@donation.id) ,class:"donation-red-btn"%>
+    <%= link_to "『いただきます』", donation_receives_path(@donation.id) ,class:"donation-green-btn"%>
 
     <% end %> 
-    <%# <% end %> 
+   <% end %> 
  
 
     <div class="donation-explain-box">
