@@ -58,9 +58,14 @@ https://miniroom-38424.onrender.com
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDCvmk/edit#gid=982722306
 
-# 実装予定の機能
+# 実装済みの機能　　
+1. SNS新規登録
+2. Mini　Room機能⇨ホームページに一覧表示されます。
+3. Donation Room機能⇨Donation Roomに一覧表示されます。
+写真添付まだ
 
-現在Donation（差し上げる）機能を実装中です。
+
+# 実装予定の機能
 
 今後は「いただきます」機能、コメント機能、プライベートコメント機能、いいね機能など実装予定です。
 
