@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   root 'minirooms#index'
   resources :users, only: :new  
   resources :minirooms, only: [:new, :index, :create, :edit, :show, :update, :destroy]
-  resources :donations, only: [:index, :new, :create, :edit, :show, :update, :destroy]
+  resources :donations do
+    resources :receives, only: [:index, :new, :create]
+  end
 end

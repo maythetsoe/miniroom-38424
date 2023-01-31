@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_24_120130) do
+ActiveRecord::Schema.define(version: 2023_01_31_112420) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -57,6 +57,20 @@ ActiveRecord::Schema.define(version: 2023_01_24_120130) do
     t.index ["user_id"], name: "index_minirooms_on_user_id"
   end
 
+  create_table "receives", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "donation_id", null: false
+    t.string "post_code", null: false
+    t.integer "region_id", null: false
+    t.string "city", null: false
+    t.string "address", null: false
+    t.string "phone_num", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["donation_id"], name: "index_receives_on_donation_id"
+    t.index ["user_id"], name: "index_receives_on_user_id"
+  end
+
   create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
@@ -84,5 +98,7 @@ ActiveRecord::Schema.define(version: 2023_01_24_120130) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "donations", "users"
   add_foreign_key "minirooms", "users"
+  add_foreign_key "receives", "donations"
+  add_foreign_key "receives", "users"
   add_foreign_key "sns_credentials", "users"
 end

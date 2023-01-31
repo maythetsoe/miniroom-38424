@@ -12,7 +12,7 @@ class Donation < ApplicationRecord
     belongs_to :user
     has_one_attached :image
     has_many :donation_rooms
-    has_many :donations, through: :donation_rooms
+    has_one :receive
   
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :category
