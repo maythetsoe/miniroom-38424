@@ -18,7 +18,7 @@ https://miniroom-38424.onrender.com
 ・Basic認証パスワード : admin  
 ・Basic認証ID : 2222  
 ・「差し上げます」者用  
-  メールアドレス: test@t.com  
+  メールアドレス: test@tt.com  
   パスワード: q123123  
 ・「頂きます」者用  
   メールアドレス: test@p.com  
