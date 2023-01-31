@@ -1,0 +1,135 @@
+/* 商品の概要 */
+
+.donation-show {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.donation-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-box>.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+  border: 3px green solid;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  margin: 10px 0 0 0;
+}
+
+.donation-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: #f6acac ;
+  object-fit: contain;
+}
+
+.donation-red-btn {
+  text-align: center;
+  width: 500px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin: 20px 0px; 
+  padding: 2vh 20vw; 
+}
+
+.or-text{
+  padding: 2vh 23vw;
+  color: green;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.donation-destroy {
+  width: 500px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 22vw;
+}
+
+.donation-explain-box {
+  color: black;
+  border: 3px green solid;
+  border-radius: 3px;
+  font-size: 15px;
+  width: 755px;
+  letter-spacing: 0.1em;
+  padding: 0px 0 10px 0;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-donation {
+  width: 20%;
+  background-color: #eee;
+  border: 3px #da6666 solid;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 3px #da6666 solid;
+  font-size: 14px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.favorite-btn {
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+  color: rgb(249, 75, 0);
+  border: 2px solid #ffb340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.favorite-star-icon {
+  margin-right: 5px;
+}
+
+.report-btn {
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+
+  padding: 1vh 0;
+  color: black;
+  border: 2px solid #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.report-flag-icon {
+  margin-right: 5px;
+}

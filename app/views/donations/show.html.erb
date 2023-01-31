@@ -1,14 +1,11 @@
-<%= render "shared/header" %>
-
 <%# 商品の概要 %>
-
-<div class="item-show">
-  <div class="item-box">
+<div class="donation-show">
+  <div class="donation-box">
     <h2 class="name">
       <%= @donation.name %>
     </h2>
-    <div class="item-img-content">
-      <%= image_tag @donation.image ,class:"item-box-img" %>
+    <div class="donation-img-content">
+      <%= image_tag @donation.image ,class:"donation-box-img" %><br>
 
        <%# <% if @item.order.present? %> 
       <%# <div class="sold-out"> %>
@@ -16,51 +13,51 @@
       <%# </div> %>
        <%# <% end %> 
  
-    <% if user_signed_in? && @donation.order.nil? %>  
+    <%# <% if user_signed_in? && @donation.receive.nil? %>   
     <% if current_user.id == @donation.user.id %>
-    <%= link_to "商品の編集", edit_donation_path(@donation.id), method: :get, class: "item-red-btn" %>
+    <%= link_to "商品の編集", edit_donation_path(@donation.id), method: :get, class: "donation-red-btn" %>
     <p class="or-text">or</p>
-    <%= link_to "削除", donation_path(@donation.id), method: :delete, class:"item-destroy" %>
+    <%= link_to "削除", donation_path(@donation.id), method: :delete, class:"donation-destroy" %>
    <% else %>
 
-    <%= link_to "『いただきます』に進む", donation_receives_path(@donation.id) ,class:"item-red-btn"%>
+    <%= link_to "『いただきます』に進む", donation_receives_path(@donation.id) ,class:"donation-red-btn"%>
 
     <% end %> 
-    <% end %>
+    <%# <% end %> 
  
 
-    <div class="item-explain-box">
+    <div class="donation-explain-box">
       <span><%= @donation.description %></span>
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
-          <th class="detail-item">出品者</th>
+          <th class="detail-donation">出品者</th>
           <td class="detail-value"><%= @donation.user.nickname %></td>
         </tr>
         <tr>
-          <th class="detail-item">カテゴリー</th>
-          <td class="detail-value"><%= @donation.detail_category.name %></td>
+          <th class="detail-donation">カテゴリー</th>
+          <td class="detail-value"><%= @donation.category.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">商品の状態</th>
-          <td class="detail-value"><%= @donation.detail_commodity_condition.name %></td>
+          <th class="detail-donation">商品の状態</th>
+          <td class="detail-value"><%= @donation.condition.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">配送料の負担</th>
-          <td class="detail-value"><%= @donation.delivery_burden.name %></td>
+          <th class="detail-donation">配送料の負担</th>
+          <td class="detail-value"><%= @donation.delivery.name %></td>
         </tr>
           <tr>
-          <th class="detail-item">着払い料金</th>
-          <td class="detail-value"><%= @donation.delivery_burden.name %></td>
+          <th class="detail-donation">着払い料金</th>
+          <td class="detail-value"><%= @donation.size.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">発送元の地域</th>
+          <th class="detail-donation">発送元の地域</th>
           <td class="detail-value"><%= @donation.region.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">発送日の目安</th>
-          <td class="detail-value"><%= @donation.days_to_ship.name %></td>
+          <th class="detail-donation">発送日の目安</th>
+          <td class="detail-value"><%= @donation.ship.name %></td>
         </tr>
       </tbody>
     </table>
