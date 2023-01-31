@@ -1,0 +1,60 @@
+<div class="donations-sell-contents">
+  <header class="donations-sell-header"> 
+
+  </header>
+  <div class="donation-main">
+    <h2 class="donation-title">商品の編集入力</h2>
+    <%= form_with model: @donation, local: true do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"donation-image" %>
+      </div>
+    </div>
+
+
+    <div class="donations-detail">
+     <div class="weight-bold-text">商品の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          商品の状態
+          <span class="indispensable">必須</span>
+        </div>
+      <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"donation-sales-status"}) %>
+      </div>
+    </div>
+
+    <div class="donations-detail">
+      <div class="weight-bold-text question-text">
+        <span>配送について</span>
+        <a class="question" href="#">?</a>
+      </div>
+      <div class="form">
+        <div class="weight-bold-text">
+          着払い料金
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select-box", id:"donation-size-fee"}) %>
+      </div>
+    </div>
+
+
+    <div class="sell-btn-contents">
+      <%= f.submit "差し上げます",class:"sell-btn" %>
+      <%=link_to 'もどる', donations_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="donations-sell-footer">
+  </footer>
+</div>
+

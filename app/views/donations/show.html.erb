@@ -20,7 +20,7 @@
     <%= link_to "削除", donation_path(@donation.id), method: :delete, class:"donation-destroy" %>
    <% else %>
 
-    <%= link_to "『いただきます』に進む", donation_receives_path(@donation.id) ,class:"donation-red-btn"%>
+    <%= link_to "『いただきます』", donation_path(@donation.id) ,class:"donation-red-btn"%>
 
     <% end %> 
     <%# <% end %> 
