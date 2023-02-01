@@ -1,6 +1,7 @@
 class MiniroomsController < ApplicationController
   def index
     @minirooms = Miniroom.all.order("created_at DESC")
+    @user = User.new
   end
 
   def new
