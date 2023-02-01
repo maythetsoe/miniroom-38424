@@ -178,7 +178,7 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 | content                          | text       | null: false                    |
 | donation                         | references | null: false, foreign_key: true |
 | user                             | references | null: false, foreign_key: true |
-| receive                            | references | null: false, foreign_key: true |
+| receive                          | references | null: false, foreign_key: true |
 
 ### Association
 

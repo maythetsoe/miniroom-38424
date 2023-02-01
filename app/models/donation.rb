@@ -13,6 +13,7 @@ class Donation < ApplicationRecord
     has_one_attached :image
     has_many :donation_rooms
     has_one :receive
+    has_many :comments
   
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :category
