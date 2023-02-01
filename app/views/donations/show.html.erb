@@ -4,9 +4,8 @@
     <h2 class="name">
       <%= @donation.name %>
     </h2>
-    <div class="donation-img-content">
-      <%= image_tag @donation.image ,class:"donation-box-img" %><br>
-
+   <div class="donation-img-content"> 
+      <%= image_tag @donation.image ,class:"donation-box-img" %>
        <% if @donation.receive.present? %> 
       <div class="out"> 
         <span>あげちゃった!!</span> 

@@ -10,9 +10,7 @@
 }
 
 .transaction-main {
-  width: 70vw;
-  min-width: 450px;
-  padding: 10vh 10vw;
+  margin: 0;
 }
 
 .transaction-title-text {
@@ -28,14 +26,14 @@
 
 /* 配送先の入力 */
 .shipping-address-form {
-  margin-top: 15px;
+  margin: 0;
+  /* margin-top: 15px; */
   padding: 0.4em 1.6em;
   color: #fff;
   background: #22693c;
   border: 3px #da6666 solid;
   border-radius: 3px;
   font-size: 15px;
-  width: 600px;
   letter-spacing: 0.1em;
 }
 
