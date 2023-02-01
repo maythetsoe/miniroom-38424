@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   }
   get 'users/index', to: 'users#index'
   root 'minirooms#index'
-  resources :users, only: :new  
+  resources :users, only: [:new, :show]
   resources :minirooms, only: [:new, :index, :create, :edit, :show, :update, :destroy]
   resources :donations do
     resources :receives, only: [:index, :new, :create]

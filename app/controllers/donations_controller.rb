@@ -5,6 +5,7 @@ class DonationsController < ApplicationController
   
     def index
       @donations = Donation.all.order("created_at DESC")
+      @user = User.new
     end
   
     def new
