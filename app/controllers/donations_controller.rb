@@ -45,6 +45,8 @@ class DonationsController < ApplicationController
   end
   
     def show
+      @comment = Comment.new
+      @comments = @donation.comments.includes(:user)
     end
   
     private

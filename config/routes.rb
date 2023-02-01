@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :minirooms, only: [:new, :index, :create, :edit, :show, :update, :destroy]
   resources :donations do
     resources :receives, only: [:index, :new, :create]
+    resources :comments, only: :create
   end
 end
