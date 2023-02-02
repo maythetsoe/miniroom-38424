@@ -14,6 +14,11 @@ class Donation < ApplicationRecord
     has_many :donation_rooms
     has_one :receive
     has_many :comments
+    has_many :favorites, dependent: :destroy
+
+    def favorited?(user)
+      favorites.where(user_id: user.id).exists?
+   end
   
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :category
