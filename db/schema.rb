@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_01_104003) do
+ActiveRecord::Schema.define(version: 2023_02_02_094945) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -56,6 +56,24 @@ ActiveRecord::Schema.define(version: 2023_02_01_104003) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_donations_on_user_id"
+  end
+
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "donation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["donation_id"], name: "index_favorites_on_donation_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "miniroomfavorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "miniroom_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["miniroom_id"], name: "index_miniroomfavorites_on_miniroom_id"
+    t.index ["user_id"], name: "index_miniroomfavorites_on_user_id"
   end
 
   create_table "minirooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -109,6 +127,10 @@ ActiveRecord::Schema.define(version: 2023_02_01_104003) do
   add_foreign_key "comments", "donations"
   add_foreign_key "comments", "users"
   add_foreign_key "donations", "users"
+  add_foreign_key "favorites", "donations"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "miniroomfavorites", "minirooms"
+  add_foreign_key "miniroomfavorites", "users"
   add_foreign_key "minirooms", "users"
   add_foreign_key "receives", "donations"
   add_foreign_key "receives", "users"
