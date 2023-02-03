@@ -117,7 +117,6 @@ a {
 .miniroom__wrapper, .miniroom__hedding,.detail__message {
   text-align: center;
   display: inline-block;
-    /* background-color: #ea352d; */
     border: 3px #da6666 solid;
     font-size: 20px;
     font-weight: bold;

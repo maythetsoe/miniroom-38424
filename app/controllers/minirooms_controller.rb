@@ -19,6 +19,8 @@ class MiniroomsController < ApplicationController
 
   def show
     @miniroom = Miniroom.find(params[:id])
+    @miniroomcomment = Miniroomcomment.new
+    @miniroomcomments = @miniroom.miniroomcomments.includes(:user)
   end
 
   def edit

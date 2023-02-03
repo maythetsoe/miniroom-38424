@@ -39,6 +39,33 @@
 <% end %>
 </div>
 
+     </div>
+
+  <div class="donation__comments">
+      <% if user_signed_in? %>
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+          <%= form_with model: [@miniroom, @miniroomcomment],local: true do |f|%>
+            <div class="field">
+          <%= f.label :content, "コメント" %><br />
+              <%= f.text_field :content, id:"comment_content" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "送信する", class: :form__btn  %>
+            </div>
+        <% end %>
+         <% end %>
+        <ul class="comments_lists">
+          <% @miniroomcomments.each do |miniroomcomment| %>
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+            <li class="comments_list">
+            <%= miniroomcomment.content %>
+      <strong><%= link_to "(#{miniroomcomment.user.nickname})さん", "/users/#{miniroomcomment.user.id}", class: :comment_user %></strong>
+            </li>
+             <% end %>
+        </ul>
+      </div>
     </div>
+
+
   </div>
 </main>
