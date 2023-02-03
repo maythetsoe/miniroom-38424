@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_02_094945) do
+ActiveRecord::Schema.define(version: 2023_02_02_105327) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 2023_02_02_094945) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
-    t.bigint "donation_id"
-    t.bigint "user_id"
+    t.bigint "donation_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["donation_id"], name: "index_comments_on_donation_id"
@@ -65,6 +65,16 @@ ActiveRecord::Schema.define(version: 2023_02_02_094945) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["donation_id"], name: "index_favorites_on_donation_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "miniroomcomments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.bigint "miniroom_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["miniroom_id"], name: "index_miniroomcomments_on_miniroom_id"
+    t.index ["user_id"], name: "index_miniroomcomments_on_user_id"
   end
 
   create_table "miniroomfavorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -129,6 +139,8 @@ ActiveRecord::Schema.define(version: 2023_02_02_094945) do
   add_foreign_key "donations", "users"
   add_foreign_key "favorites", "donations"
   add_foreign_key "favorites", "users"
+  add_foreign_key "miniroomcomments", "minirooms"
+  add_foreign_key "miniroomcomments", "users"
   add_foreign_key "miniroomfavorites", "minirooms"
   add_foreign_key "miniroomfavorites", "users"
   add_foreign_key "minirooms", "users"

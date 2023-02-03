@@ -1,7 +1,8 @@
 /* 商品の概要 */
 
 .donation-show {
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
+  background-color: white;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -149,25 +150,4 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-}
-
-.favorite-star-icon {
-  margin-right: 5px;
-}
-
-.report-btn {
-  border-radius: 40px;
-  width: 15vw;
-  min-width: 200px;
-
-  padding: 1vh 0;
-  color: black;
-  border: 2px solid #2d2d2d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.report-flag-icon {
-  margin-right: 5px;
 }

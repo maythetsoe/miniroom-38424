@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :show]
   resources :minirooms do
   resource :miniroomfavorites, only: [:create, :destroy]
+  resources :miniroomcomments, only: :create
   end
 
   resources :donations do
