@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2023_02_02_105327) do
   end
 
   create_table "donations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.string "name", null: false
     t.text "description", null: false
     t.integer "category_id", null: false
@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 2023_02_02_105327) do
   create_table "minirooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "concept"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_minirooms_on_user_id"

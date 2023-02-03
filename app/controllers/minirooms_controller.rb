@@ -1,4 +1,6 @@
 class MiniroomsController < ApplicationController
+  before_action :set_miniroom, only: [:edit, :show, :update, :destroy]
+
   def index
     @minirooms = Miniroom.all.order("created_at DESC")
     @user = User.new
@@ -18,13 +20,11 @@ class MiniroomsController < ApplicationController
   end
 
   def show
-    @miniroom = Miniroom.find(params[:id])
     @miniroomcomment = Miniroomcomment.new
     @miniroomcomments = @miniroom.miniroomcomments.includes(:user)
   end
 
   def edit
-   @miniroom = Miniroom.find(params[:id])
     if user_signed_in? && current_user.id == @miniroom.user_id 
      redirect_to miniroom_path  unless current_user.id == @miniroom.user_id
     else
@@ -33,7 +33,6 @@ class MiniroomsController < ApplicationController
   end
 
   def update
-    @miniroom = Miniroom.find(params[:id])
    if @miniroom.update(miniroom_params)
     redirect_to miniroom_path
    else
@@ -42,7 +41,6 @@ class MiniroomsController < ApplicationController
   end
 
   def destroy
-    @miniroom = Miniroom.find(params[:id])
     if @miniroom.destroy
       redirect_to root_path
     else
@@ -55,4 +53,9 @@ class MiniroomsController < ApplicationController
   def miniroom_params
     params.require(:miniroom).permit(:title, :concept, :image).merge(user_id: current_user.id)
   end
+
+  def set_miniroom 
+    @miniroom = Miniroom.find(params[:id])
+  end
+
 end

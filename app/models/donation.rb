@@ -13,7 +13,7 @@ class Donation < ApplicationRecord
     has_one_attached :image
     has_many :donation_rooms
     has_one :receive
-    has_many :comments
+    has_many :comments, dependent: :destroy
     has_many :favorites, dependent: :destroy
 
     def favorited?(user)
