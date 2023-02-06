@@ -29,6 +29,7 @@ https://miniroom-38424.onrender.com
 ## 写真投稿
 
 1.トップページ（一覧ページ）のヘッダーからユーザー新規登録を行います。
+[![Image from Gyazo](https://i.gyazo.com/4c6bcbc7dc9215f30a814c063f5154fc.png)](https://gyazo.com/4c6bcbc7dc9215f30a814c063f5154fc)
 
 2.Mini Roomから自分の憧れのミニマルリストの写真など(自分の部屋の写真)を投稿できる、写真内容（タイトル・画像・コンセプト）を入力し投稿します。
 3.いいね機能も導入予定です。
