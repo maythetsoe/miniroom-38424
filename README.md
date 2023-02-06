@@ -28,10 +28,19 @@ https://miniroom-38424.onrender.com
 
 ## 写真投稿
 
-1.トップページ（一覧ページ）のヘッダーからユーザー新規登録を行います。
+1.トップページ（一覧ページ）のヘッダーからユーザー新規登録ができます。SNSログイン（Facebook, Googleログイン）も可能となっております。もしくはログインで入れます
 [![Image from Gyazo](https://i.gyazo.com/4c6bcbc7dc9215f30a814c063f5154fc.png)](https://gyazo.com/4c6bcbc7dc9215f30a814c063f5154fc)
+[![Image from Gyazo](https://i.gyazo.com/fb637029c61ec3d21378d72787bd738a.png)](https://gyazo.com/fb637029c61ec3d21378d72787bd738a)
 
 2.Mini Roomから自分の憧れのミニマルリストの写真など(自分の部屋の写真)を投稿できる、写真内容（タイトル・画像・コンセプト）を入力し投稿します。
+[![Image from Gyazo](https://i.gyazo.com/f44596f13b65c315233c57308b5bb24d.png)](https://gyazo.com/f44596f13b65c315233c57308b5bb24d)　　
+
+3.投稿済みの写真はトップベージで表示されログインしてない人にも見れます。
+[![Image from Gyazo](https://i.gyazo.com/559be5fed5c9669b3ee821c2cef44b6f.png)](https://gyazo.com/559be5fed5c9669b3ee821c2cef44b6f)　　
+
+4.投稿した人が写真をクリックすると写真の詳細・編集する・削除する・コメント・いいねができます。  
+[![Image from Gyazo](https://i.gyazo.com/f3c81bcd4fbcaa23daccd6a21d9df844.gif)](https://gyazo.com/f3c81bcd4fbcaa23daccd6a21d9df844)
+
 3.いいね機能も導入予定です。
 
 ## 他者に物を差し上げる
