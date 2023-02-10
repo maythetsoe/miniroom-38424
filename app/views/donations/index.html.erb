@@ -1,10 +1,11 @@
 <div class='main'>
+<%= link_to new_donation_path, class: 'receive-btn' do %> 
+ <span class='donation-btn-text'>差し上げます</span> 
+ <% end %> 
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
       <%= render partial: 'donation', collection: @donations %>
     </div>
-<%= link_to new_donation_path, class: 'receive-btn' do %> 
- <span class='donation-btn-text'>差し上げます</span> 
- <% end %> 
+
  </div>
 
