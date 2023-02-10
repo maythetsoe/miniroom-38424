@@ -62,20 +62,21 @@
     </table>
 
     <div class="favorite-btn">
+      <% if user_signed_in? %>
      <% if @donation.favorited?(current_user) %>
     <%# # 一致するレコードが存在する＝すでにいいね済みの場合はdestroyアクションへ %>
     <%= link_to donation_favorites_path(@donation.id), method: :delete do %>
-        <span style="color:red;">❤︎❤︎❤︎いいね</span>
+        <span style="color:red;">❤︎いいね</span>
     <% end %>
 <% else %>
     <%# # 一致するレコードが存在しない＝まだいいねしていない場合はcreateアクションへ %>
     <%= link_to donation_favorites_path(@donation.id), method: :post do %>
         <span>❤︎いいね</span>
     <% end %>
+      <% end %>
 <% end %>
 </div>
 </div>
-
 
   <div class="donation__comments">
       <% if user_signed_in? %>
