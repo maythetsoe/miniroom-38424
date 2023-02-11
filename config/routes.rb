@@ -9,11 +9,17 @@ Rails.application.routes.draw do
   resources :minirooms do
   resource :miniroomfavorites, only: [:create, :destroy]
   resources :miniroomcomments, only: :create
+  collection do
+    get 'search'
+  end
   end
 
   resources :donations do
     resources :receives, only: [:index, :new, :create]
     resources :comments, only: :create
     resource :favorites, only: [:create, :destroy]
+    collection do
+      get 'search'
+    end
   end
 end
