@@ -1,7 +1,7 @@
 class DonationsController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
     before_action :set_donation, only: [:edit, :show, :update, :destroy]
-    before_action :move_to_index, except: [:index, :show]
+    before_action :move_to_index, except: [:index, :show, :search]
   
     def index
       @donations = Donation.all.order("created_at DESC")
@@ -48,6 +48,10 @@ class DonationsController < ApplicationController
     def show
       @comment = Comment.new
       @comments = @donation.comments.includes(:user)
+    end
+
+    def search
+      @donations = Donation.search(params[:keyword])
     end
   
     private

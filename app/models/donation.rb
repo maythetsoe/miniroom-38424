@@ -16,6 +16,14 @@ class Donation < ApplicationRecord
     has_many :comments, dependent: :destroy
     has_many :favorites, dependent: :destroy
 
+    def self.search(search)
+      if search != ""
+        Donation.where('name LIKE(?)', "%#{search}%")
+      else
+        Donation.all
+      end
+    end
+
     def favorited?(user)
       favorites.where(user_id: user.id).exists?
    end

@@ -48,6 +48,10 @@ class MiniroomsController < ApplicationController
     end
   end
 
+  def search
+    @minirooms = Miniroom.search(params[:keyword])
+  end
+
   private
 
   def miniroom_params

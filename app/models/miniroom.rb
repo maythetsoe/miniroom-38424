@@ -7,6 +7,14 @@ class Miniroom < ApplicationRecord
   has_many :miniroomfavorites, dependent: :destroy
   has_many :miniroomcomments, dependent: :destroy
 
+  def self.search(search)
+    if search != ""
+      Miniroom.where('title LIKE(?)', "%#{search}%")
+    else
+      Miniroom.all
+    end
+  end
+
   def favorited?(user)
     miniroomfavorites.where(user_id: user.id).exists?
  end
