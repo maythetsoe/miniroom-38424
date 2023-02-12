@@ -124,12 +124,11 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 
 # 工夫したポイント  
 
-1.SNS（facebook, Google）でログインできます。 
+1.SNS（facebook, Google）でログインできます。   
 2.着払いのみ為、商品と見合う払う価値あるかをすぐ判断できるように目安の料金を確認できます。  
 3.誰でもか使える簡単でシンプリなアプリです。  
 4.地球環境の為に自分が細やかな部分でも貢献出来ればと思い一石二鳥のこのアプリを作る事にしました。  
 5.今まで学習したことやまだ学習してないことなどを自分のアプリに入れて完成するように日々少しずつ実装していました。
-
 
 # テーブル設計
 
@@ -182,8 +181,7 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 | delivery_id                      | integer    | null: false                    |
 | region_id                        | integer    | null: false                    |
 | ship_id                          | integer    | null: false                    |
-| size_id                          | integer    | null: false                   
-|
+| size_id                          | integer    | null: false                    |
 
 ### Association
 
