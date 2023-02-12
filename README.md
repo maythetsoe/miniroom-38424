@@ -91,17 +91,18 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 1. 新規登録（SNSアカウントでログインできる機能も含む）
 2. Mini　Room機能（写真投稿）⇨ホームページに一覧表示されます。
 3. Mini Room詳細機能・Mini Room編集機能・Mini Room削除機能・Mini Room一覧表
-4. Donation Room機能（寄付する投稿）⇨Donation Roomに一覧表示されます。
+4. Donation Room機能（寄付する投稿）⇨Donation Roomページに一覧表示されます。
 5. Donation Room詳細機能・Donation Room編集機能・Donation Room削除機能・Donation Room一覧表
 8. Receive機能（いただきます機能）⇨いただいた商品に対しては「あげちゃった」が表示されます。　　
-9. 各々のコメント機能
-10. 各々のいいね機能
-11. マイページ機能
+9. 個々のコメント機能
+10. 個々のいいね機能 
+11. マイページ機能(MiniRoom・DonationRoom表示されます)
+12. トップページへ戻るボタン
 
 # 実装予定の機能
-1.作成したアプリに非同期いいね機能を実装する予定です。
-2.複数写真投稿が出来るように実装予定です。
-自分がいいねし写真・商品などをまとめて見れるように実装予定です。
+1. 作成したアプリに非同期いいね機能を実装する予定です。
+2. 複数写真投稿が出来るように実装予定です。
+3. 自分がいいねし写真・商品などをまとめて見れるように実装予定です。
 
 # データベース設計(ER図)
 
@@ -120,12 +121,13 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 ・テキストエディタ
 ・タスク管理
 
-# 工夫したポイント
+# 工夫したポイント  
 
-1.着払いのみ為、商品と見合う払う価値あるかをすぐ判断できるように目安の料金を確認できます。  
-2.SNS（facebook, Google）でログインできます。  
+1.SNS（facebook, Google）でログインできます。 
+2.着払いのみ為、商品と見合う払う価値あるかをすぐ判断できるように目安の料金を確認できます。  
 3.誰でもか使える簡単でシンプリなアプリです。  
 4.地球環境の為に自分が細やかな部分でも貢献出来ればと思い一石二鳥のこのアプリを作る事にしました。  
+5.今まで学習したことやまだ学習してないことなどを自分のアプリに入れて完成するように日々少しずつ実装していました。
 
 
 # テーブル設計
@@ -146,6 +148,8 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 - has_many :donations
 - has_many :comments
 - has_many :receives
+- has_many :favorites
+- has_many :miniroomfavorites
 
 ## mini roomテーブル　（prototype）
 ## imageはActive Storage導入
@@ -160,6 +164,8 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 
 - belongs_to :user
 - has_many :comments
+- has_many :miniroomfavorites
+- has_many :miniroomcomments
 
 
 ## donationテーブル(出品)
@@ -175,15 +181,15 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 | delivery_id                      | integer    | null: false                    |
 | region_id                        | integer    | null: false                    |
 | ship_id                          | integer    | null: false                    |
-| size                             | integer    | null: false                    |
-<!-- | mini_room                        | references | null: false, foreign_key: true | -->
-
+| size_id                          | integer    | null: false                   
+|
 
 ### Association
 
 - belongs_to :user
 - has_one :receive
 - has_many :comments
+- has_many :favorites
 
 
 ## receiveテーブル(order)
@@ -202,7 +208,6 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 
 - belongs_to :user
 - belongs_to :donation
-- has_many :comments 
 
 
 ## commentsテーブル
@@ -212,11 +217,46 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 | content                          | text       | null: false                    |
 | donation                         | references | null: false, foreign_key: true |
 | user                             | references | null: false, foreign_key: true |
-| receive                          | references | null: false, foreign_key: true |
+
+### Association
+
+- belong_to :user
+- belong_to :donation
+
+## favoritesテーブル
+
+| Column                           | Type       | Options                        |
+| -------------------------------  | ---------- | -------------------------------|
+| donation                         | references | null: false, foreign_key: true |
+| user                             | references | null: false, foreign_key: true |
+
+### Association
+
+- belong_to :user
+- belong_to :donation
+
+## miniroomfavoritesテーブル
+
+| Column                           | Type       | Options                        |
+| -------------------------------  | ---------- | -------------------------------|
+| miniroom                         | references | null: false, foreign_key: true |
+| user                             | references | null: false, foreign_key: true |
 
 ### Association
 
 - belong_to :user
 - belong_to :miniroom
-- belong_to :donation
-- belong_to :receive
+
+## miniroomcommentsテーブル
+
+| Column                           | Type       | Options                        |
+| -------------------------------  | ---------- | -------------------------------|
+| content                          | text       | null: false                    |
+| miniroom                         | references | null: false, foreign_key: true |
+| user                             | references | null: false, foreign_key: true |
+
+### Association
+
+- belong_to :user
+- belong_to :miniroom
+
