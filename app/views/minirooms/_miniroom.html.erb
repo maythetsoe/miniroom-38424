@@ -6,4 +6,21 @@
 <%= link_to "/#{miniroom.user.nickname}さん", "/users/#{miniroom.user.id}" , class: :card__user %>
  <%# <%= link_to "by #{mini_room.user_id.nickname}", "/users/#{mini_room.user.id}" , class: :card__user %>
   </div>
+<p class="pagetop"><a href="#wrap">▲</a></p>
+<script>
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
 </div>
