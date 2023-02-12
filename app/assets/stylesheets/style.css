@@ -251,3 +251,14 @@ form textarea {
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
 }
+
+.right-btn{
+  background: #666;
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  padding: 5px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
