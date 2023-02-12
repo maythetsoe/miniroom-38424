@@ -93,14 +93,12 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 3. Mini Room詳細機能・Mini Room編集機能・Mini Room削除機能・Mini Room一覧表
 4. Donation Room機能（寄付する投稿）⇨Donation Roomページに一覧表示されます。
 5. Donation Room詳細機能・Donation Room編集機能・Donation Room削除機能・Donation Room一覧表
-8. Receive機能（いただきます機能）⇨いただいた商品に対しては「あげちゃった」が表示されます。　　
-9. 各自のコメント機能
-10. 個々のいいね機能 
-11. マイページ機能(MiniRoom・DonationRoom表示されます)
-12. 投稿検索機能
-13. トップページへ戻るボタン
-
-
+6. Receive機能（いただきます機能）⇨いただいた商品に対しては「あげちゃった」が表示されます。　　
+7. 各自のコメント機能
+8. 個々のいいね機能 
+9. マイページ機能(MiniRoom・DonationRoom表示されます)
+10. 投稿検索機能
+11. トップページへ戻るボタン
 
 # 実装予定の機能
 1. 作成したアプリに非同期いいね機能を実装する予定です。
