@@ -99,6 +99,7 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 9. マイページ機能(MiniRoom・DonationRoom表示されます)
 10. 投稿検索機能
 11. トップページへ戻るボタン
+12. フォロー、フォロワー機能
 
 # 実装予定の機能
 1. 作成したアプリに非同期いいね機能を実装する予定です。
@@ -150,6 +151,9 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 - has_many :receives
 - has_many :favorites
 - has_many :miniroomfavorites
+- has_many :relationships
+- has_many :followings
+- has_many :followers
 
 ## mini roomテーブル　（prototype）
 ## imageはActive Storage導入
@@ -258,4 +262,17 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 
 - belong_to :user
 - belong_to :miniroom
+
+## relationshipsテーブル
+
+| Column                           | Type       | Options                        |
+| -------------------------------  | ---------- | -------------------------------|
+| following_id                     | integer    | null: false                    |
+| follower_id                      | integer    | null: false                    |
+
+### Association
+
+- belongs_to :follower
+- belongs_to :following
+
 
