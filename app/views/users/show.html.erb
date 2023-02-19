@@ -12,7 +12,7 @@
           <% if @user == current_user %>
             <p class="lead text-muted">You're currently signed in as <%= current_user.email %></p><br>
           <% else %>
-        <% if @user.is_followed_by?(current_user) %>
+        <% if @user.is_followed_by?(@user) %>
           <%= link_to user_relationships_path(@user), method: :delete do %>
             <button class="btn btn-danger", style="background-color:#da6666;" >フォロー解除</button><br><br>
           <% end %>
