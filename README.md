@@ -28,11 +28,11 @@ https://miniroom-38424.onrender.com
 
 ## 写真投稿(Mini Room)
 
-**1.**トップページ（一覧ページ）のヘッダーからユーザー新規登録ができます。SNSログイン（Facebook, Googleログイン）も可能となっております。もしくはログインで入れます
+**1**.トップページ（一覧ページ）のヘッダーからユーザー新規登録ができます。SNSログイン（Facebook, Googleログイン）も可能となっております。もしくはログインで入れます
 [![Image from Gyazo](https://i.gyazo.com/376ba2321f8969724bf37a0fe526b84c.png)](https://gyazo.com/376ba2321f8969724bf37a0fe526b84c)
 [![Image from Gyazo](https://i.gyazo.com/8e447293f4e3b54cfeb39423d2adc2af.png)](https://gyazo.com/8e447293f4e3b54cfeb39423d2adc2af)
 
-__2.__Mini Roomから自分の憧れのミニマルリストの写真など(自分の部屋の写真)を投稿できる、写真内容（タイトル・画像・コンセプト）を入力し投稿します。
+__2__.Mini Roomから自分の憧れのミニマルリストの写真など(自分の部屋の写真)を投稿できる、写真内容（タイトル・画像・コンセプト）を入力し投稿します。
 [![Image from Gyazo](https://i.gyazo.com/56edf8f53b7419f0df2d4b42673a06fe.png)](https://gyazo.com/56edf8f53b7419f0df2d4b42673a06fe)
 
 __3.__投稿済みの写真はトップベージで表示されログインしてない人にも見れます。
