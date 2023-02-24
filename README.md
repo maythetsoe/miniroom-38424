@@ -28,53 +28,55 @@ https://miniroom-38424.onrender.com
 
 ## 写真投稿(Mini Room)
 
-1.トップページ（一覧ページ）のヘッダーからユーザー新規登録ができます。SNSログイン（Facebook, Googleログイン）も可能となっております。もしくはログインで入れます
-[![Image from Gyazo](https://i.gyazo.com/4c6bcbc7dc9215f30a814c063f5154fc.png)](https://gyazo.com/4c6bcbc7dc9215f30a814c063f5154fc)
-[![Image from Gyazo](https://i.gyazo.com/fb637029c61ec3d21378d72787bd738a.png)](https://gyazo.com/fb637029c61ec3d21378d72787bd738a)
+__1.__トップページ（一覧ページ）のヘッダーからユーザー新規登録ができます。SNSログイン（Facebook, Googleログイン）も可能となっております。もしくはログインで入れます
+[![Image from Gyazo](https://i.gyazo.com/07b4d8d5c15683dbcf3055ef551c28a7.jpg)](https://gyazo.com/07b4d8d5c15683dbcf3055ef551c28a7)
+[![Image from Gyazo](https://i.gyazo.com/8e447293f4e3b54cfeb39423d2adc2af.png)](https://gyazo.com/8e447293f4e3b54cfeb39423d2adc2af)
 
-2.Mini Roomから自分の憧れのミニマルリストの写真など(自分の部屋の写真)を投稿できる、写真内容（タイトル・画像・コンセプト）を入力し投稿します。
-[![Image from Gyazo](https://i.gyazo.com/f44596f13b65c315233c57308b5bb24d.png)](https://gyazo.com/f44596f13b65c315233c57308b5bb24d)　　
+__2.__Mini Roomから自分の憧れのミニマルリストの写真など(自分の部屋の写真)を投稿できる、写真内容（タイトル・画像・コンセプト）を入力し投稿します。
+[![Image from Gyazo](https://i.gyazo.com/56edf8f53b7419f0df2d4b42673a06fe.png)](https://gyazo.com/56edf8f53b7419f0df2d4b42673a06fe)
 
-3.投稿済みの写真はトップベージで表示されログインしてない人にも見れます。
-[![Image from Gyazo](https://i.gyazo.com/559be5fed5c9669b3ee821c2cef44b6f.png)](https://gyazo.com/559be5fed5c9669b3ee821c2cef44b6f)　　
+__3.__投稿済みの写真はトップベージで表示されログインしてない人にも見れます。
+[![Image from Gyazo](https://i.gyazo.com/a2121be6969b8fc1dfb01f68a0579f44.jpg)](https://gyazo.com/a2121be6969b8fc1dfb01f68a0579f44)
 
-4.投稿した人が写真をクリックすると写真の詳細・編集する・削除する・コメント・いいねができます。  
-[![Image from Gyazo](https://i.gyazo.com/f3c81bcd4fbcaa23daccd6a21d9df844.gif)](https://gyazo.com/f3c81bcd4fbcaa23daccd6a21d9df844)
+__4.__投稿した人が写真をクリックすると写真の詳細・編集する・削除する・コメント・いいねができます。  
+[![Image from Gyazo](https://i.gyazo.com/20a4fefb2ee148fa6284726ada07d12b.gif)](https://gyazo.com/20a4fefb2ee148fa6284726ada07d12b)
 
-5.今後、作成したアプリに非同期いいね機能を実装する予定です。
+__5.__今後、作成したアプリに非同期いいね機能を実装する予定です。
 
-6.現在写真1枚投稿となっておりますが今後複数の写真出来るように実装予定です。
+__6.__現在写真1枚投稿となっておりますが今後複数の写真出来るように実装予定です。
 
 ## 他者に物を差し上げる(Donation Room)
-1.トップページのヘッダーからDonation Roomをクリックすると下に「差し上げます」のボタンがあります。クリックすると物を差し上げることが出来ます。内容は（商品の状態の写真、説明、発送情報など、着払いのみ  
+__1.__トップページのヘッダーからDonation Roomをクリックすると下に「差し上げます」のボタンがあります。クリックすると物を差し上げることが出来ます。内容は（商品の状態の写真、説明、発送情報など、着払いのみ  
 （目安の料金）などなど）を投稿し寄付できます。
-[![Image from Gyazo](https://i.gyazo.com/57b760e5c1c9b2f15f13915f8371c413.gif)](https://gyazo.com/57b760e5c1c9b2f15f13915f8371c413)  
+[![Image from Gyazo](https://i.gyazo.com/25fc7ce197c8df346d7504e71eee404b.gif)](https://gyazo.com/25fc7ce197c8df346d7504e71eee404b) 
 
-2.ご自身のDonation商品をクリックすると写真の詳細・編集する・削除する・コメント・いいねができます。（Mini Roomと同様です。）  
+__2.__ご自身のDonation商品をクリックすると写真の詳細・編集する・削除する・コメント・いいねができます。（Mini Roomと同様です。）  
 
-3.コメント欄の投稿者名をクリックするとその人に今まで投稿した写真などが見れます。ハットマックついているものがDonation商品と付いてないものがMiniRoomの写真投稿です。分かるように分別しています。
-[![Image from Gyazo](https://i.gyazo.com/47ee892a04c547c9336732acc194d7f8.gif)](https://gyazo.com/47ee892a04c547c9336732acc194d7f8)
+__3.__コメント欄の投稿者名をクリックするとその人に今まで投稿した写真などが見れます。ハットマックついているものがDonation商品と付いてないものがMiniRoomの写真投稿です。分かるように分別しています。
+[![Image from Gyazo](https://i.gyazo.com/7684ac302b6f06b19517bf4e054efe8b.gif)](https://gyazo.com/7684ac302b6f06b19517bf4e054efe8b)
 
-4.ユーザーの寄付した商品の詳細をクリックし、「いただきます」ボタンを押し、自分の情報を入れることで物を手に入れるができます。
-[![Image from Gyazo](https://i.gyazo.com/f9e67c8f7b5566e697af90b4c1c9e5e6.png)](https://gyazo.com/f9e67c8f7b5566e697af90b4c1c9e5e6)
-[![Image from Gyazo](https://i.gyazo.com/d8b74624a0b785b948e4758decfda7b3.png)](https://gyazo.com/d8b74624a0b785b948e4758decfda7b3)
+__4.__ユーザーの寄付した商品の詳細をクリックし、「いただきます」ボタンを押し、自分の情報を入れることで物を手に入れるができます。
+[![Image from Gyazo](https://i.gyazo.com/55793e6e920965620f039bb9ac333971.gif)](https://gyazo.com/55793e6e920965620f039bb9ac333971)
 
-5.いただいた商品に関しましてはDonationRoomのページに「あげちゃった」という表示でます。商品の詳細にも「あげちゃった」が表示します。
+__5.__いただいた商品に関しましてはDonationRoomのページに「あげちゃった」という表示でます。商品の詳細にも「あげちゃった」が表示します。
 [![Image from Gyazo](https://i.gyazo.com/90735b77e70eb1d419bd97814ed4e69c.png)](https://gyazo.com/90735b77e70eb1d419bd97814ed4e69c)
 
-6.Mini Roomと同様、今後作成したアプリに非同期いいね機能を実装する予定です。
+__6.__Mini Roomと同様、今後作成したアプリに非同期いいね機能を実装する予定です。
 
-7.現在写真1枚投稿となっておりますが今後複数の写真出来るように実装予定です。
+__7.__現在写真1枚投稿となっておりますが今後複数の写真出来るように実装予定です。
 
-8.ログインしていないユーザーがDonation Roomの商品を見れません。
+__8.__ログインしていないユーザーがDonation Roomの商品を見れません。
 
 ## マイページ
-1.ユーザーがヘッダーから「Welcome To Minimal Life」をクリックするとそのユーザーが投稿した写真（Mini Roomの商品）・寄付した商品（Donation Roomの商品）をまとめてご覧になれます。  
+__1.__ユーザーがヘッダーから「Welcome To Minimal Life」をクリックするとそのユーザーが投稿した写真（Mini Roomの商品）・寄付した商品（Donation Roomの商品）をまとめてご覧になれます。  
 
-2.今後は自分がいいねし写真・商品などをまとめて見れるように実装予定です。
+__2.__今後は自分がいいねし写真・商品などをまとめて見れるように実装予定です。  
+
+__3.__フォロー、フォロワー機能を実装しています。自分をフォローしている人をクリックし自分もフォローすることができます。　　
+[![Image from Gyazo](https://i.gyazo.com/5e7f4e101cf789308c0aba5fae354e15.gif)](https://gyazo.com/5e7f4e101cf789308c0aba5fae354e15)
 
 ## 物を譲った方にお返しする（任意）
-1.日本人の文化は何かをもらった時を何かをお返しする文化があるため、譲っていただいた商品の中にもし自分がすごく気に入った物があればギフト券などを個人にPrivate Chatでコードを送ることができます。
+__1.__日本人の文化は何かをもらった時を何かをお返しする文化があるため、譲っていただいた商品の中にもし自分がすごく気に入った物があればギフト券などを個人にPrivate Chatでコードを送ることができます。
 
 # アプリケーションを作成した背景
 
