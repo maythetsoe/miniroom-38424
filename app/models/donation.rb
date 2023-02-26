@@ -15,6 +15,7 @@ class Donation < ApplicationRecord
     has_one :receive
     has_many :comments, dependent: :destroy
     has_many :favorites, dependent: :destroy
+    has_many :favorited_users, through: :favorites, source: :user
 
     def self.search(search)
       if search != ""

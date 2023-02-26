@@ -1,4 +1,6 @@
 class MiniroomfavoritesController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :destroy]
+  before_action :miniroomfavorite_params, only: [:create, :destroy]
   def create
     @miniroom_miniroomfavorite = Miniroomfavorite.new(miniroomfavorite_params)
     @miniroom_miniroomfavorite.save
