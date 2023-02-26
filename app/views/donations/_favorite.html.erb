@@ -1,0 +1,25 @@
+   <div class="favorite-btn">
+   <% if user_signed_in? %>
+      <% if @donation.favorited?(current_user) %>
+    <%# # 一致するレコードが存在する＝すでにいいね済みの場合はdestroyアクションへ %>
+    <%= link_to donation_favorites_path(@donation.id), method: :delete do %>
+        <span style="color:red;">❤︎</span>
+      <%=donation.favorites.length %>
+          <% end %>
+
+       <% elsif @donation.favorited?(current_user) %>
+      <%= link_to donation_favorites_path(donation, donation.favorites), class: "like-link", method: :delete, remote: true do %>
+      <% end %>
+
+       <%= donation.favorites.length %>
+
+       <% else %>
+           <%# # 一致するレコードが存在しない＝まだいいねしていない場合はcreateアクションへ %>
+    <%= link_to donation_favorites_path(@donation.id), method: :post do %>
+        <span>❤︎</span>
+       <% end %>
+        <%= donation.favorites.length %>
+       <% end %>
+       <% end %>
+</div>
+

@@ -8,7 +8,9 @@ class User < ApplicationRecord
   has_many :minirooms, dependent: :destroy
   has_many :donations, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_many :favorited_donations, through: :favorites, source: :donation
   has_many :miniroomfavorites, dependent: :destroy
+  has_many :miniroomfavorited_minirooms, through: :miniroomfavorites, source: :miniroom
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create

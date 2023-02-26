@@ -1,0 +1,25 @@
+   <div class="favorite-btn">
+   <% if user_signed_in? %>
+      <% if @miniroom.favorited?(current_user) %>
+    <%# # 一致するレコードが存在する＝すでにいいね済みの場合はdestroyアクションへ %>
+    <%= link_to miniroom_miniroomfavorites_path(@miniroom.id), method: :delete do %>
+        <span style="color:red;">❤︎</span>
+      <%= miniroom.miniroomfavorites.length %>
+          <% end %>
+
+       <% elsif @miniroom.favorited?(current_user) %>
+      <%= link_to miniroom_miniroomfavorites_path(miniroom, miniroom.miniroomfavorites), class: "like-link", method: :delete, remote: true do %>
+      <% end %>
+
+       <%= miniroom.miniroomfavorites.length %>
+
+       <% else %>
+           <%# # 一致するレコードが存在しない＝まだいいねしていない場合はcreateアクションへ %>
+    <%= link_to miniroom_miniroomfavorites_path(@miniroom.id), method: :post do %>
+        <span>❤︎</span>
+       <% end %>
+        <%= miniroom.miniroomfavorites.length %>
+       <% end %>
+       <% end %>
+</div>
+

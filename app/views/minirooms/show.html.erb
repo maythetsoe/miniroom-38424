@@ -25,20 +25,8 @@
         </div>
       </div>
 
-    <div class="favorite-btn">
-   <% if user_signed_in? %>
-     <% if @miniroom.favorited?(current_user) %>
-    <%# # 一致するレコードが存在する＝すでにいいね済みの場合はdestroyアクションへ %>
-    <%= link_to miniroom_miniroomfavorites_path(@miniroom.id), method: :delete do %>
-        <span style="color:red;">❤︎いいね</span>
-    <% end %>
-<% else %>
-    <%# # 一致するレコードが存在しない＝まだいいねしていない場合はcreateアクションへ %>
-    <%= link_to miniroom_miniroomfavorites_path(@miniroom.id), method: :post do %>
-        <span>❤︎いいね</span>
-    <% end %>
-    <% end %>
-    <% end %>
+<div id = "miniroomfavorite_<%= @miniroom.id %>">
+  <%= render partial: "minirooms/miniroomfavorite", locals: { miniroom: @miniroom } %>
 </div>
  </div>
   <div class="donation__comments">
