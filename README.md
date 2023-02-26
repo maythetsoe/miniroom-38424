@@ -97,14 +97,14 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 5. Donation Room詳細機能・Donation Room編集機能・Donation Room削除機能・Donation Room一覧表
 6. Receive機能（いただきます機能）⇨いただいた商品に対しては「あげちゃった」が表示されます。　　
 7. 各自のコメント機能
-8. 個々のいいね機能 
+8. 個々のいいね機能
 9. マイページ機能(MiniRoom・DonationRoom表示されます)
 10. 投稿検索機能
 11. トップページへ戻るボタン
 12. フォロー、フォロワー機能
 
 # 実装予定の機能
-1. 作成したアプリに非同期いいね機能を実装する予定です。
+1. 作成したアプリに非同期いいね機能を実装する予定です。（2/26に完成しました。）
 2. 複数写真投稿が出来るように実装予定です。
 3. 自分がいいねし写真・商品などをまとめて見れるように実装予定です。
 
