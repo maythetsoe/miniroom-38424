@@ -91,7 +91,7 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 
 # 実装済みの機能　　
 1. 新規登録（SNSアカウントでログインできる機能も含む）
-2. Mini　Room機能（写真投稿）⇨ホームページに一覧表示されます。
+2. Mini Room機能（写真投稿）⇨ホームページに一覧表示されます。
 3. Mini Room詳細機能・Mini Room編集機能・Mini Room削除機能・Mini Room一覧表
 4. Donation Room機能（寄付する投稿）⇨Donation Roomページに一覧表示されます。
 5. Donation Room詳細機能・Donation Room編集機能・Donation Room削除機能・Donation Room一覧表
@@ -157,8 +157,6 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 - has_many :favorites
 - has_many :miniroomfavorites
 - has_many :relationships
-- has_many :followings
-- has_many :followers
 
 ## mini roomテーブル　（prototype）
 ## imageはActive Storage導入
