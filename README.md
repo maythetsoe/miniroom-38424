@@ -112,6 +112,9 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 
 [![Image from Gyazo](https://i.gyazo.com/6d2737e92119b4533ded3b4f517e842b.png)](https://gyazo.com/6d2737e92119b4533ded3b4f517e842b)
 
+(最新データベース設計)
+[![Image from Gyazo](https://i.gyazo.com/1468fb42f3a310a6a13d3d7a4525ca6a.png)](https://gyazo.com/1468fb42f3a310a6a13d3d7a4525ca6a)
+
 # 画面遷移図
 
 [![Image from Gyazo](https://i.gyazo.com/c57659a07c4398cca57bd293ffa43a96.png)](https://gyazo.com/c57659a07c4398cca57bd293ffa43a96)
@@ -169,7 +172,6 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 ### Association
 
 - belongs_to :user
-- has_many :comments
 - has_many :miniroomfavorites
 - has_many :miniroomcomments
 
@@ -274,7 +276,6 @@ https://docs.google.com/spreadsheets/d/13ALrbDsXBnYmrMgrvqt-Ez_B9FS7YMavWjlPZvDC
 
 ### Association
 
-- belongs_to :follower
-- belongs_to :following
+- belongs_to :user
 
 
